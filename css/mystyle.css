@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+
+/* 將中文字體套用到所有頁面元素，並設定一個通用字重 */
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400; /* 設定一個基本的字重 */
+}
+
+/* 確保所有標題也使用 Noto Sans TC */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Noto Sans TC", sans-serif;
+    /* 保持模板中設定的粗體效果 */
+    font-weight: 700; 
+}
+
+/* 其他自定義樣式，例如您的 social-icons: */
+.social-icons .social-icon:hover {
+    background-color: #095b9e !important;
+    color: rgb(255, 255, 255);
+}
+
+
+/* mystyle.css - 將主色調統一為您的深藍色 */
+:root {
+    --bs-primary: #084c61; /* 您想要的深藍色 */
+    --bs-primary-rgb: 8, 76, 97; /* 對應的 RGB 值 */
+    --bs-link-hover-color: #0d6e8b; /* 連結懸停色 (可選，讓顏色更亮一點) */
+}
+
+.social-icons .social-icon:hover {
+    /* 您保留的社交圖標懸停色 */
+    background-color: #084B83 !important;
+    color: rgb(255, 255, 255);
+}
