@@ -17,23 +17,40 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/mystyle.css" rel="stylesheet" />
         <style>
-            body{
-                background-color:#DFFDFF;
-                background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");  
+            /* 1. 設定深色背景和淺色文字 */
+            body {
+                background-color: #1a1a2e; /* 深太空藍 */
+                overflow-x: hidden; /* 防止滾動條出現 */
+                color: #e0e0e0; /* 淺灰色文字 */
             }
+            /* 2. 設定導航欄樣式 */
             .navbar {
-                background-color:#B388EB!important;
-                background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png")!important;    
+                background-color: rgba(26, 26, 46, 0.8) !important; /* 半透明效果 */
+                background-image: none !important;
+                backdrop-filter: blur(5px); /* 毛玻璃效果 (可選) */
             }
-            .text-primary{
-                color: #084c61 !important;
+            /* 3. 設定主要強調色 */
+            .text-primary {
+                color: #e94560 !important; /* 科技感紅色 */
             }
-            .social-icons :hover {
-                background-color: #084B83 !important;
-                color:rgb(255, 255, 255)
+            /* 4. 設定社交圖標懸停效果 */
+            .social-icons .social-icon:hover {
+                background-color: #e94560 !important;
+                color: #ffffff;
             }
-
-
+            /* 5. 確保內容文字在深色背景下可見 */
+            .resume-section-content h1,
+            .resume-section-content h2,
+            .resume-section-content h3,
+            .resume-section-content h4,
+            .resume-section-content h5,
+            .resume-section-content h6,
+            .resume-section-content p,
+            .resume-section-content .subheading,
+            .resume-section-content .lead,
+            .resume-section-content small {
+                color: #e0e0e0;
+            }
         </style>
     </head>
     <body id="page-top">
