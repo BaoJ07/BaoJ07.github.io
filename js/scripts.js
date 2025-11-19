@@ -24,9 +24,11 @@ window.addEventListener('DOMContentLoaded', event => {
         document.querySelectorAll('#navbarResponsive .nav-link')
     );
     responsiveNavItems.map(function (responsiveNavItem) {
-        if (window.getComputedStyle(navbarToggler).display !== 'none') {
-            navbarToggler.click();
-        }
+        responsiveNavItem.addEventListener('click', () => {
+            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                navbarToggler.click();
+            }
+        });
     });
 
     // 所有會影響排版或導致衝突的自定義 JavaScript 程式碼已移除。
