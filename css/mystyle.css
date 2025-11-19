@@ -6,7 +6,6 @@
 body {
     font-family: "Noto Sans TC", sans-serif;
     font-weight: 400; 
-    /* 移除 position: relative; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,7 +19,3 @@ h1, h2, h3, h4, h5, h6 {
     --bs-primary-rgb: 0, 188, 212; 
     --bs-link-hover-color: #008fa3;
 }
-
-/* --- 動態背景與互動樣式已移除 --- */
-/* body::before, body::after, 和 @keyframes 動畫已移除 */
-/* #interactive-element 相關的 CSS 已移除 */

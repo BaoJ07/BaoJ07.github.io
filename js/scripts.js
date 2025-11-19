@@ -24,22 +24,10 @@ window.addEventListener('DOMContentLoaded', event => {
         document.querySelectorAll('#navbarResponsive .nav-link')
     );
     responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
+        if (window.getComputedStyle(navbarToggler).display !== 'none') {
+            navbarToggler.click();
+        }
     });
 
-});
-
-// --- 新增互動效果：Tenor GIF 追蹤滑鼠 ---
-document.addEventListener('DOMContentLoaded', () => {
-    const interactiveElement = document.getElementById('interactive-element');
-    
-    // 追蹤滑鼠移動並更新元素位置
-    document.addEventListener('mousemove', (e) => {
-        // 假設 GIF (100px 寬高) 的中心對準滑鼠位置，所以減去一半 (50px)
-        interactiveElement.style.transform = `translate(${e.clientX - 50}px, ${e.clientY - 50}px)`;
-    });
+    // 所有會影響排版或導致衝突的自定義 JavaScript 程式碼已移除。
 });
