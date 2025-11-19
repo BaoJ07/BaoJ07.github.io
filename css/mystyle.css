@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 
-/* --- 基礎設定與顏色變數 (與科技主題同步) --- */
+/* --- 基礎設定 --- */
 
 /* Font Settings (保持中文字體) */
 body {
     font-family: "Noto Sans TC", sans-serif;
-    font-weight: 400;
-    /* 這是實現動態背景的關鍵：讓內容層次正確 */
-    position: relative;
-    z-index: 1; 
+    font-weight: 400; 
+    /* 移除 position: relative; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,65 +14,13 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700; 
 }
 
-/* Primary Color Variables (讓 Bootstrap 元素如按鈕、連結使用科技紅色) */
+/* Primary Color Variables (科技感的青藍色) */
 :root {
-    --bs-primary: #e94560; /* 科技紅作為主要色 */
-    --bs-primary-rgb: 233, 69, 96; 
-    --bs-link-hover-color: #f17488;
+    --bs-primary: #00bcd4; /* 青藍色 */
+    --bs-primary-rgb: 0, 188, 212; 
+    --bs-link-hover-color: #008fa3;
 }
 
-/* --- 網格背景與數據流動畫 (Grid Background and Data Flow Animation) --- */
-
-/* 偽元素 ::before: 創建藍色動態網格 */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        linear-gradient(rgba(0, 188, 212, 0.1) 1px, transparent 1px), /* 水平線 */
-        linear-gradient(90deg, rgba(0, 188, 212, 0.1) 1px, transparent 1px); /* 垂直線 */
-    background-size: 30px 30px; /* 網格大小 */
-    animation: grid-move 20s linear infinite; /* 網格移動動畫 */
-    z-index: -1; /* 放在最底層 */
-}
-
-@keyframes grid-move {
-    from { background-position: 0 0; }
-    to { background-position: 30px 30px; } /* 讓網格緩慢移動 */
-}
-
-/* 偽元素 ::after: 創建紅色數據流動效果 (疊加在網格上) */
-body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        linear-gradient(to right, rgba(233, 69, 96, 0.2) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(233, 69, 96, 0.2) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: data-flow 15s linear infinite;
-    opacity: 0.3; /* 半透明效果 */
-    z-index: -1;
-    pointer-events: none; 
-}
-
-@keyframes data-flow {
-    from { background-position: 0 0; }
-    to { background-position: -100px -100px; } /* 數據流動方向 */
-}
-/* --- 生動化樣式：追蹤滑鼠互動元素 --- */
-#interactive-element {
-    position: absolute;
-    pointer-events: none; /* 讓滑鼠穿透這個元素，不影響點擊下方內容 */
-    z-index: 9999; /* 確保它在最上層 */
-    opacity: 0.8;
-    transition: transform 0.1s linear; /* 增加平滑移動效果 */
-    top: 0;
-    left: 0;
-}
+/* --- 動態背景與互動樣式已移除 --- */
+/* body::before, body::after, 和 @keyframes 動畫已移除 */
+/* #interactive-element 相關的 CSS 已移除 */
