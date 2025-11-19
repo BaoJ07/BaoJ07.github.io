@@ -23,19 +23,19 @@
                 overflow-x: hidden; /* 防止滾動條出現 */
                 color: #e0e0e0; /* 淺灰色文字 */
             }
-            /* 2. 設定導航欄樣式 */
+            /* 2. 設定導航欄樣式 - 變得更明顯 */
             .navbar {
-                background-color: rgba(26, 26, 46, 0.8) !important; /* 半透明效果 */
-                background-image: none !important;
-                backdrop-filter: blur(5px); /* 毛玻璃效果 (可選) */
+                background-color: rgba(30, 30, 70, 0.9) !important; /* 更深的藍紫色半透明 */
+                background-image: url("https://www.transparenttextures.com/patterns/grid.png")!important; /* 增加網格紋理 */
+                backdrop-filter: blur(8px); /* 稍微更強的毛玻璃效果 */
             }
             /* 3. 設定主要強調色 */
             .text-primary {
-                color: #e94560 !important; /* 科技感紅色 */
+                color: #00bcd4 !important; /* 科技感的青藍色 (可選，如果您喜歡之前的紅色也可以保留) */
             }
             /* 4. 設定社交圖標懸停效果 */
             .social-icons .social-icon:hover {
-                background-color: #e94560 !important;
+                background-color: #00bcd4 !important;
                 color: #ffffff;
             }
             /* 5. 確保內容文字在深色背景下可見 */
@@ -51,9 +51,24 @@
             .resume-section-content small {
                 color: #e0e0e0;
             }
+            /* Education 區塊的地圖圖標顏色 */
+            #education .social-icon i {
+                color:#00bcd4 !important; /* 配合新的強調色 */
+            }
         </style>
     </head>
     <body id="page-top">
+        <!-- 生動化元素：Tenor GIF 追蹤滑鼠 -->
+        <div id="interactive-element">
+            <iframe 
+                src="https://tenor.com/embed.js?postid=20511920&locale=zh_TW" 
+                frameborder="0" 
+                allowfullscreen 
+                style="width: 100%; height: 100%; border-radius: 50%;"
+                width="100" height="100">
+            </iframe>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -103,37 +118,30 @@
             </section>
             <hr class="m-0" />
             <!-- Experience-->
-            <section class="resume-section" id="experience">
+           <section class="resume-section" id="experience">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Experience</h2>
+                    
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">慧燈臺語社</h3>
-                            <div class="subheading mb-3">副社長</div>
-                           
+                            <h3 class="mb-0 text-primary">傳技展 副導演</h3>
+                            <div class="subheading mb-3">世新大學資訊傳播學系</div>
+                            <p class="lead">透過這個大工程讓我知道拍攝一部影片並不簡單，需要很多人齊心協力和溝通來完成一部作品。</p>
                         </div>
-                        
                     </div>
+                    
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">慧燈桌球社</h3>
-                            
-                            
+                            <h3 class="mb-0 text-primary">全國學生攝影比賽 - AI創作組佳作</h3>
+                            <div class="subheading mb-3">ComfyUI 創作</div>
+                            <p class="mb-3">在創作的過程中部段的在尋找要用什麼 AI 工具才比較有機會得獎，最後是用 ComfyUI 來進行創作。</p>
                         </div>
-                        
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                        
-                            <br><br><h3 class="mb-0">慧燈辯論社</h3>
-                           
+                        <div class="flex-shrink-0 text-center ms-md-5">
+                            <img class="img-fluid rounded shadow" src="assets/img/ai-art.jpg" alt="AI 創作組佳作作品" style="max-width: 200px; height: auto;">
+                            <div class="text-muted mt-2 small">AI創作組佳作作品示意圖</div>
                         </div>
-                        
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            
-                    </div>
+                    
                 </div>
             </section>
             <hr class="m-0" />
@@ -217,46 +225,34 @@
             </section>
             <hr class="m-0" />
             <!-- Awards-->
-           <section class="resume-section" id="works">
-    <div class="resume-section-content">
-        <h2 class="mb-5">我的作品</h2>
-        
-        <div class="subheading mb-3">名片設計</div>
-        <div class="row mb-5">
-            <div class="col-lg-6 mb-4">
-                <img class="img-fluid rounded shadow" src="assets/img/名片1.png" alt="名片正面" style="width: 100%; height: auto;">
-            </div>
-            <div class="col-lg-6 mb-4">
-                <img class="img-fluid rounded shadow" src="assets/img/名片2.png" alt="名片背面" style="width: 100%; height: auto;">
-            </div>
-        </div>
-
-        <div class="subheading mb-3">攝影作品</div>
-        <div class="row mb-5">
-             <div class="col-lg-6 mb-4">
-                <img class="img-fluid rounded shadow" src="assets/img/photo1.jpg" alt="photo1" style="width: 100%; height: auto;">
-            </div>
-            <div class="col-lg-6 mb-4">
-                <img class="img-fluid rounded shadow" src="assets/img/photo2.jpg" alt="photo2" style="width: 100%; height: auto;">
-            </div>
-        </div>
-        
-        <div class="subheading mb-3">傳技展作品 (職位: 副導演)</div>
-        <div class="row">
-            <div class="col-lg-6">
-                <a href="https://youtu.be/twk7KZ_uX48?si=8UHnYMKCoyxuAPlt" target="_blank">
-                    <img class="img-fluid rounded shadow" src="assets/img/video1.png" alt="傳技展作品封面" style="width: 100%; height: auto;">
-                </a>
-            </div>
-            <div class="col-lg-6 d-flex align-items-center">
-                <p class="lead mt-3 mt-lg-0">
-                    點擊圖片觀看作品。這部作品是 [簡短描述作品主題或您的主要貢獻]。
-                </p>
-            </div>
-        </div>
-        
-    </div>
-</section>
+          <section class="resume-section" id="works">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">我的作品集 (Works)</h2>
+                    
+                    <div class="row">
+                        <div class="col-lg-6 mb-5">
+                            <h3 class="subheading mb-3 text-primary">影片標題一：[數位影像處理個人作業]</h3>
+                            <div class="embed-responsive embed-responsive-16by9" style="position: relative; height: 0; padding-bottom: 56.25%;">
+                                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1?autoplay=0&rel=0" 
+                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6 mb-5">
+                            <h3 class="subheading mb-3 text-primary">影片標題二：[資傳技能回顧]</h3>
+                            <div class="embed-responsive embed-responsive-16by9" style="position: relative; height: 0; padding-bottom: 56.25%;">
+                                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2?autoplay=0&rel=0" 
+                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

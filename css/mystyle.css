@@ -68,3 +68,13 @@ body::after {
     from { background-position: 0 0; }
     to { background-position: -100px -100px; } /* 數據流動方向 */
 }
+/* --- 生動化樣式：追蹤滑鼠互動元素 --- */
+#interactive-element {
+    position: absolute;
+    pointer-events: none; /* 讓滑鼠穿透這個元素，不影響點擊下方內容 */
+    z-index: 9999; /* 確保它在最上層 */
+    opacity: 0.8;
+    transition: transform 0.1s linear; /* 增加平滑移動效果 */
+    top: 0;
+    left: 0;
+}
